@@ -27,9 +27,9 @@ window.onscroll = () => {
             sec.classList.add('show-animate');
         }
         //if you want to use an animation that represents on scroll use this
-        else {
-            sec.classList.remove('show-animate');
-        }
+        //else {
+          //  sec.classList.remove('show-animate');
+        //}
     });
 
     // sticky header
@@ -44,12 +44,21 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 
     // animation footer on scroll
-    let footer = document.querySelector('.footer');
+    const elements = ['header', 'home', 'about', 'education', 'skills', 'contact', 'footer'];
 
-    if (footer) {
-        footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
-    } else {
-        console.error('Footer element not found.');
-    }
+    elements.forEach(elementClass => {
+        const element = document.querySelector(`.${elementClass}`);
+        if (element) {
+            window.addEventListener('scroll', () => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop <= window.innerHeight) {
+                    element.classList.add('show-animate');
+                }
+            });
+        } else {
+            console.error(`${elementClass} element not found.`);
+        }
+    });
+
 
 }
