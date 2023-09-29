@@ -24,7 +24,7 @@
     border-radius: 50%;
 }
 .light-theme {
-    --bg-color: #F3F9FB;
+    --bg-color: #F2F2F2;
     --second-bg-color: #EAD7BB;
     --text-color: #113F67;
     --main-color: #226597;
@@ -666,6 +666,7 @@ width: 50%;
     }
     #menu-icon {
         display: block;
+        margin-left: auto;
     }
     .navbar {
         position: absolute;
