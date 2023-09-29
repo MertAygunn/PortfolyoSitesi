@@ -35,7 +35,7 @@
     color: var(--second-bg-color);
 }
 html {
-    font-size: 62.5%;
+    font-size: 60%;
     overflow-x: hidden;
 }
 body {
@@ -203,7 +203,7 @@ section {
     bottom: 4rem;
     width: 170px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .home-sci a {
     position: relative;
