@@ -68,7 +68,7 @@ body {
     display:none;
 }
 section {
-    min-height: 100dvh;
+    min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 .home {
@@ -377,15 +377,15 @@ span {
     padding-top: .5rem;
 }
 .skills {
-    padding-bottom: 7rem;
     background: var(--second-bg-color);
-    display: grid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
 }
 .skills h2 {
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    align-self: center;
+    font-size: 6rem;
+    margin-bottom: 5rem;
 }
 .skills .skills-row {
     display: flex;
@@ -475,19 +475,21 @@ width: 50%;
     width: 50%;
 }
 .contact {
-    padding-bottom: 7rem;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
 }
 .contact h2 {
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
-    align-self: center;
 }
 .contact form {
-    max-width: 70rem;
+    max-width: -webkit-fill-available;
     margin: 0 auto;
     text-align: center;
+    width: 70rem;
 }
 .contact form .input-box {
     position: relative;
