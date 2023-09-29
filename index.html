@@ -189,17 +189,17 @@
 <!-- contact section design -->
 <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
-    <form action="#">
+    <form method="post" action="send-email.php">
         <div class="input-box">
             <div class="input-field">
-                <label>
-                    <input type="text" placeholder="Full Name" required>
+                <label for="name">
+                    <input type="text" name="name" id="name" placeholder="Full Name" required>
                 </label>
                 <span class="focus"></span>
             </div>
             <div class="input-field">
-                <label>
-                    <input type="text" placeholder="Email Address" required>
+                <label for="email">
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
                 </label>
                 <span class="focus"></span>
             </div>
@@ -207,21 +207,21 @@
         </div>
         <div class="input-box">
             <div class="input-field">
-                <label>
-                    <input type="text" placeholder="Mobile Number" required>
+                <label for="phone">
+                    <input type="text" name="phone" id="phone" placeholder="Mobile Number" required>
                 </label>
                 <span class="focus"></span>
             </div>
             <div class="input-field">
-                <label>
-                    <input type="text" placeholder="Email Subject" required>
+                <label for="subject">
+                    <input type="text" name="subject" id="subject" placeholder="Email Subject" required>
                 </label>
                 <span class="focus"></span>
             </div>
             <span class="animate scroll" style="--i:3;"></span>
         </div>
         <div class="textarea-field">
-            <label for=""></label><textarea name="" id="" cols="30" rows="" placeholder="Your Message" required></textarea>
+            <label for="message"></label><textarea name="message" id="message" cols="30" rows="" placeholder="Your Message" required></textarea>
             <span class="focus"></span>
             <span class="animate scroll" style="--i:4;"></span>
         </div>

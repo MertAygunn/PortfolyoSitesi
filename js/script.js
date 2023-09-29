@@ -28,23 +28,24 @@ window.onscroll = () => {
         }
         //if you want to use an animation that represents on scroll use this
         //else {
-          //  sec.classList.remove('show-animate');
+        //  sec.classList.remove('show-animate');
         //}
     });
-
+}
     // sticky header
-    let header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
+let header = document.querySelector('header');
+if (window.scrollY > 100) {
+    header.classList.add('sticky');
+} else {
+    header.classList.remove('sticky');
+}
 
+window.addEventListener("scroll", function () {
     var icon = document.getElementById('icon');
 
-    icon.onclick = function(){
+    icon.onclick = function () {
         document.body.classList.toggle('light-theme');
-        if(document.body.classList.contains('light-theme')) {
+        if (document.body.classList.contains('light-theme')) {
             icon.src = 'images/sun.png';
             //$('.home').css('background', 'url(\'/images/background-light.jpg\') center');
             $('.home')
@@ -58,26 +59,24 @@ window.onscroll = () => {
             $('#icon').css('background', 'aliceblue')
         }
     }
+});
 
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
+menuIcon.classList.remove('bx-x');
+navbar.classList.remove('active');
 
-    // animation footer on scroll
-    const elements = ['header', 'home', 'about', 'education', 'skills', 'contact', 'footer'];
+// animation footer on scroll
+const elements = ['header', 'home', 'about', 'education', 'skills', 'contact', 'footer'];
 
-    elements.forEach(elementClass => {
-        const element = document.querySelector(`.${elementClass}`);
-        if (element) {
-            window.addEventListener('scroll', () => {
-                const elementTop = element.getBoundingClientRect().top;
-                if (elementTop <= window.innerHeight) {
-                    element.classList.add('show-animate');
-                }
-            });
-        } else {
-            console.error(`${elementClass} element not found.`);
-        }
-    });
-
-
-}
+elements.forEach(elementClass => {
+    const element = document.querySelector(`.${elementClass}`);
+    if (element) {
+        window.addEventListener('scroll', () => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop <= window.innerHeight) {
+                element.classList.add('show-animate');
+            }
+        });
+    } else {
+        console.error(`${elementClass} element not found.`);
+    }
+})
