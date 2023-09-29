@@ -2,10 +2,10 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+    menuIcon.onclick = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    }
 
 // scroll sections
 let sections = document.querySelectorAll('section');
@@ -38,6 +38,25 @@ window.onscroll = () => {
         header.classList.add('sticky');
     } else {
         header.classList.remove('sticky');
+    }
+
+    var icon = document.getElementById('icon');
+
+    icon.onclick = function(){
+        document.body.classList.toggle('light-theme');
+        if(document.body.classList.contains('light-theme')) {
+            icon.src = 'images/sun.png';
+            //$('.home').css('background', 'url(\'/images/background-light.jpg\') center');
+            $('.home')
+                .css('background', 'url(\'/images/background-light.jpg\') center')
+                .css('background-repeat-y', 'no-repeat');
+            $('#icon').css('background', 'midnightblue');
+            //$('.home').css('background-repeat', 'repeat-y');
+        } else {
+            icon.src = 'images/moon.png';
+            $('.home').css('background', 'url(\'/images/background-dark.jpg\') center');
+            $('#icon').css('background', 'aliceblue')
+        }
     }
 
     menuIcon.classList.remove('bx-x');

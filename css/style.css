@@ -16,6 +16,23 @@
     --text-color: #ededed;
     --main-color: #00abf0;
 }
+#icon {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+    background: aliceblue;
+    border-radius: 50%;
+}
+.light-theme {
+    --bg-color: #F3F9FB;
+    --second-bg-color: #87C0CD;
+    --text-color: #113F67;
+    --main-color: #226597;
+}
+.light-theme .navbar a:hover,
+.light-theme .navbar a.active {
+    color: var(--second-bg-color);
+}
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -31,6 +48,7 @@ body {
     width: 100%;
     padding: 2rem 9%;
     background: transparent;
+    /*background-color: var(--bg-color);*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,6 +66,8 @@ body {
 }
 .navbar {
     position: relative;
+    flex: 1;
+    text-align: right;
 }
 .navbar a {
     font-size: 1.7rem;
@@ -76,7 +96,7 @@ section {
     align-items: center;
     padding: 0 9%;
     background-size: 100%;
-    background: url('/images/home.jpg') center;
+    background: url('/images/background-dark.jpg') no-repeat center;
 }
 .home-content {
     max-width: 60rem;
@@ -217,19 +237,7 @@ section {
 .home-sci a:hover::before {
     width: 100%;
 }
-.home-imageHover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background: transparent;
-    transition: 1.5s;
-}
-.home-imageHover:hover {
-    background: var(--bg-color);
-    opacity: .6;
-}
+
 .about {
     display: flex;
     justify-content: center;
@@ -538,7 +546,7 @@ width: 50%;
     position: relative;
     margin: .8rem 0 2.7rem;
     display: flex;
-    height: 50rem;
+    height: 30rem;
 }
 .contact form .textarea-field textarea {
     resize: none;
@@ -613,12 +621,10 @@ width: 50%;
 .navbar .animate,
 #menu-icon .animate,
 .home.show-animate .animate {
-    will-change: transform; /* veya başka uygun bir özellik */
     animation: showRight .4s ease forwards;
     animation-delay: calc(.3s * var(--i));
 }
 .animate.scroll {
-    will-change: transform; /* veya başka uygun bir özellik */
     transition: .4s ease;
     transition-delay: calc(.3s * var(--i));
     animation: none;
