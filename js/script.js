@@ -40,7 +40,7 @@ if (window.scrollY > 100) {
     header.classList.remove('sticky');
 }
 
-window.addEventListener("scroll", function () {
+/*window.addEventListener("scroll", function () {
     var icon = document.getElementById('icon');
 
     icon.onclick = function () {
@@ -59,7 +59,29 @@ window.addEventListener("scroll", function () {
             $('#icon').css('background', 'aliceblue')
         }
     }
+});*/
+
+window.addEventListener("scroll", function () {
+    var icon = document.getElementById('icon');
+
+    icon.onclick = function () {
+        document.body.classList.toggle('light-theme');
+        var home = document.querySelector('.home');
+
+        if (document.body.classList.contains('light-theme')) {
+            icon.src = 'images/sun.png';
+            home.style.background = 'url(\'/images/background-light.jpg\') center';
+            home.style.backgroundRepeat = 'no-repeat';
+            icon.style.background = 'midnightblue';
+        } else {
+            icon.src = 'images/moon.png';
+            home.style.background = 'url(\'/images/background-dark.jpg\') center';
+            icon.style.background = 'aliceblue';
+        }
+    }
 });
+
+
 
 menuIcon.classList.remove('bx-x');
 navbar.classList.remove('active');
