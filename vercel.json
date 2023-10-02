@@ -1,10 +1,10 @@
 {
-  "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.6.0"
-    }
+  "require": {
+    "php": "^8.1",
+    "tracy/tracy": "^2.0"
   },
   "routes": [
     { "src": "/(.*)",  "dest": "/api/index.php" }
   ]
 }
+
