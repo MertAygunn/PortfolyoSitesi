@@ -1,10 +1,14 @@
+<?php
+phpinfo();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mert Aygun.</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.0.0rc1.js"></script>
     <!-- box icons -->
@@ -28,7 +32,7 @@
         <span class="animate" style="--i:1;"></span>
 
     </nav>
-    <img src ="images/moon.png" id="icon">
+    <img src ="/images/moon.png" id="icon">
 </header>
 <!-- home section design -->
 <section class="home show-animate" id="home">
@@ -59,7 +63,7 @@
 <section class="about" id="about">
     <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
     <div class="about-img">
-        <img src="images/home.png" alt="">
+        <img src="/images/home.png" alt="">
         <span class="circle-spin"></span>
         <span class="animate scroll" style="--i:2;"></span>
     </div>
@@ -189,7 +193,7 @@
 <!-- contact section design -->
 <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
-    <form method="post" action="send-email.php">
+    <form method="post" action="../send-email.php">
         <div class="input-box">
             <div class="input-field">
                 <label for="name">
@@ -242,6 +246,6 @@
         <span class="animate scroll" style="--i:2;"></span>
     </div>
 </section>
-<script src="js/script.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
