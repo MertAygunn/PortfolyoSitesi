@@ -40,7 +40,7 @@ if (window.scrollY > 100) {
     header.classList.remove('sticky');
 }
 
-window.addEventListener("scroll", function () {
+window.addEventListener("click", function () {
     var icon = document.getElementById('icon');
 
     icon.onclick = function () {
