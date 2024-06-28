@@ -1,3 +1,4 @@
+My own personel portfolio website.
 There's also dark and light theme.
 https://www.mertaygun.com/
 ![a1](https://github.com/MertAygunn/PortfolyoSitesi/assets/102766786/31a8e348-7974-42e0-950f-e00eaa64e885)
