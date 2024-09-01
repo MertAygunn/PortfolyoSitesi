@@ -48,7 +48,6 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    /*background: transparent; */
     background-color: var(--navbar-color);
     display: flex;
     justify-content: space-between;
@@ -610,7 +609,6 @@ span {
 .footer-iconTop a:hover i {
     color: var(--main-color);
 }
-/* ANIMATION RELOAD AND SCROLL */
 .animate {
     position: absolute;
     top: 0;
@@ -646,7 +644,6 @@ span {
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
-/* Breakpoints */
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -775,7 +772,6 @@ span {
         font-size: 5rem;
     }
 }
-/* KEYFRAMES ANIMATION */
 @keyframes homeBgText {
     0%, 10%, 100% {
         background-position: -33rem 0;
