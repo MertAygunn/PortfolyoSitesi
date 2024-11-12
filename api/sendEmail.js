@@ -16,8 +16,8 @@ export default async function handler(req, res) {
         });
 
         const mailOptions = {
-            from: email,
-            to: process.env.EMAIL_USER, // Alıcı e-posta adresi
+            from: process.env.OUTLOOK_USER, // Gönderen e-posta adresi
+            to: 'recipient@example.com', // Alıcı e-posta adresini buraya yazın
             subject: subject,
             text: `İsim: ${name}\nTelefon: ${phone}\nMesaj: ${message}`,
         };
@@ -26,6 +26,7 @@ export default async function handler(req, res) {
             await transporter.sendMail(mailOptions);
             return res.status(200).json({ message: 'E-posta başarıyla gönderildi!' });
         } catch (error) {
+            console.error('E-posta gönderim hatası:', error);
             return res.status(500).json({ error: 'E-posta gönderme sırasında bir hata oluştu.' });
         }
     } else {
