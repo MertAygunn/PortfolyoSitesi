@@ -6,10 +6,12 @@ export default async function handler(req, res) {
 
         // Nodemailer ile e-posta gönderme işlemi
         const transporter = nodemailer.createTransport({
-            service: 'gmail', // veya kullanmak istediğin başka bir servis
+            host: 'smtp.office365.com', // Outlook SMTP sunucusu
+            port: 587, // TLS portu
+            secure: false, // TLS kullanıldığı için false
             auth: {
-                user: process.env.OUTLOOK_USER, // E-posta adresin
-                pass: process.env.OUTLOOK_PASSWORD, // E-posta şifren
+                user: process.env.OUTLOOK_USER, // Vercel'den alınan Outlook e-posta adresi
+                pass: process.env.OUTLOOK_PASSWORD, // Vercel'den alınan Outlook şifresi
             },
         });
 
