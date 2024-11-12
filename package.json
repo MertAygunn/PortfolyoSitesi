@@ -1,0 +1,15 @@
+{
+  "name": "portfolyositesi",
+  "version": "1.0.0",
+  "description": "My own personel portfolio website.\r There's also dark and light theme.\r https://www.mertaygun.com/\r ![a1](https://github.com/MertAygunn/PortfolyoSitesi/assets/102766786/31a8e348-7974-42e0-950f-e00eaa64e885)\r ![resim](https://github.com/MertAygunn/PortfolyoSitesi/assets/102766786/c74e0de8-66c8-42ad-9b49-0aa51c9eff63)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}
