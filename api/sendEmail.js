@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
         const mailOptions = {
             from: process.env.OUTLOOK_USER, // Gönderen e-posta adresi
-            to: 'recipient@example.com', // Alıcı e-posta adresini buraya yazın
+            to: 'mertaygun97@gmail.com', // Alıcı e-posta adresini buraya yazın
             subject: subject,
             text: `İsim: ${name}\nTelefon: ${phone}\nMesaj: ${message}`,
         };
