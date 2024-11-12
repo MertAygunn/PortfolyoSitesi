@@ -9,13 +9,13 @@ export default function handler(req, res) {
             port: 587,
             secure: false, // true for 465, false for other ports
             auth: {
-                user: process.env.OUTLOOK_USER, // E-posta adresiniz
-                pass: process.env.OUTLOOK_PASSWORD, // Uygulama şifresi
+                user: "werbeastdu@hotmail.com", // E-posta adresiniz
+                pass: "rykhvxzpvydysegw", // Uygulama şifresi
             },
         });
 
         const mailOptions = {
-            from: process.env.OUTLOOK_USER, // Gönderen e-posta adresi
+            from: "werbeastdu@hotmail.com", // Gönderen e-posta adresi
             to: email, // Alıcı e-posta adresi
             subject: subject, // Konu
             text: message, // Mesaj içeriği
